@@ -18,6 +18,8 @@ forge test
 [EX20](./src/EX20.sol) is EX20 base contract
 ```solidity
 interface IEX20 is IERC20 {
+    function addPlugin(IPlugin plugin) external;
+    function removePlugin(IPlugin plugin) external;
     function transferCallback(address from, address to, uint256 value) external;
 }
 
